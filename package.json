@@ -1,0 +1,12 @@
+{
+  "name": "fan-season-tracker",
+  "version": "1.0.0",
+  "description": "Match diary and season stats for two clubs: points, form, streaks, home/away splits and a points race chart",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx serve ."
+  },
+  "author": "Celso de Azevedo Rodrigues Junior",
+  "license": "MIT"
+}

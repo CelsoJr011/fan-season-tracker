@@ -1,2 +1,5 @@
-# fan-season-tracker
-Match diary and season stats for Ponte Preta and Barcelona: points, form, streaks, home/away and a points race chart. Vanilla JS, EN/PT/FR.
+# ⚽ Fan Season Tracker
+
+A fan's match diary for Ponte Preta and Barcelona: points, form, streaks and home/away splits.
+
+Work in progress — plain HTML, CSS and JavaScript, no back-end.

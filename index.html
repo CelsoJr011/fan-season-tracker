@@ -14,6 +14,11 @@
       <p class="subtitle" data-i18n="header.subtitle">A fan's match diary: points, form and streaks for Ponte Preta and Barcelona</p>
     </div>
     <div class="topbar-actions">
+      <div class="lang-switch" role="group" data-i18n-aria="header.language" aria-label="Language">
+        <button type="button" data-lang="en" lang="en" title="English">EN</button>
+        <button type="button" data-lang="pt" lang="pt-BR" title="Português">PT</button>
+        <button type="button" data-lang="fr" lang="fr" title="Français">FR</button>
+      </div>
       <button id="reset-data" class="btn btn-ghost" type="button" data-i18n="header.reset">Reset sample data</button>
     </div>
   </header>
@@ -50,7 +55,7 @@
               <tr>
                 <th></th>
                 <th data-i18n="summary.played">Played</th>
-                <th data-i18n="summary.record">W · D · L</th>
+                <th class="nowrap" data-i18n="summary.record">W · D · L</th>
                 <th data-i18n="summary.points">Points</th>
                 <th data-i18n-title="summary.pointsPct" title="% of points won">%</th>
               </tr>

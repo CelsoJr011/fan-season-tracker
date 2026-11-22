@@ -3,7 +3,7 @@ import {
   cumulativePoints, projectPoints, biggestWin, fanMood, validateMatch, matchId,
 } from './stats.js';
 import { buildSampleMatches } from './sample-data.js';
-import { LANGUAGES, detectLanguage, translate, translateCount } from './i18n.js';
+import { LANGUAGES, detectLanguage, saveLanguage, translate, translateCount } from './i18n.js';
 import { drawPointsChart } from './chart.js';
 
 const STORAGE_KEY = 'fan-season-tracker:matches';
@@ -100,6 +100,11 @@ function applyStaticTranslations() {
     el.setAttribute('aria-label', t(el.dataset.i18nAria));
   });
 
+  document.querySelectorAll('[data-lang]').forEach((button) => {
+    const active = button.dataset.lang === lang;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
   document.querySelectorAll('[data-club]').forEach((button) => {
     const active = button.dataset.club === club;
     button.classList.toggle('active', active);
@@ -326,6 +331,15 @@ function renderMessages() {
 }
 
 // --- events --------------------------------------------------------------
+
+document.querySelectorAll('[data-lang]').forEach((button) => {
+  button.addEventListener('click', () => {
+    lang = button.dataset.lang;
+    saveLanguage(lang);
+    renderAll();
+    renderMessages();
+  });
+});
 
 document.querySelectorAll('[data-club]').forEach((button) => {
   button.addEventListener('click', () => {
